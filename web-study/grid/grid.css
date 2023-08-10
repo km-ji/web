@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+    border: 5px solid teal;
+}
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    border: 5px solid tomato;
+    border-radius: 8px;
+}
+.container{
+    display: grid;
+    height: 500px;
+    /* 열크기 지정, 열 개수 지정 가능*/
+    /* columns은 세로로 긴거 */
+    /* grid-template-columns: 100px 1fr 1fr 2fr; */
+
+    /* 반복해서 같은 값 지정해주는 repeat(열수, 크기) */
+    /*
+    minmax(최소길이, 최대길이)
+    auto-fill : 컨테이너가 빌 수 있는 여유 생길 수 있음
+    auto-fit : 컨테이너가 채워짐
+    */
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, auto)); */
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* grid-template-rows: 200px 1fr 1fr; */
+    
+    /* 요소들 사이의 간격 / 행, 열*/
+    /* gap: 10px; */
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+li:nth-child(2){
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+}
