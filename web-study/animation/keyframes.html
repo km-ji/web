@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyframes</title>
+    <style>
+        .one{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            color: white;
+            text-align: center;
+        }
+        /* @keyframes move{
+            from {
+                left 0;
+            }
+            to {
+                left: 300px;
+            }
+        } */
+        /* @keyframes move{
+            0% {left: 0;}
+            50% {left: 100px;}
+            100% {left: 300px;}
+
+        } */
+        .two{
+            top: 120px;
+            position:relative;
+            width: 100px;
+            height: 100px;
+            animation-name: move, fadeOut, changeColor;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes move{
+            from {left: 0;}
+            to {left: 300px;}
+        }
+        @keyframes fadeOut{
+            from {opacity: 1;}
+            to {opacity: 0;}
+        }
+        @keyframes changeColor{
+            from {background-color: red;}
+            to {background-color: blue;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">keyframes-1</div>
+    <div class="two">keyframes-2</div>
+</body>
+</html>

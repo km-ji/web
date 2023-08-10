@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myAnimation</title>
+    <style>
+        div{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            animation: myAnimation 5s infinite;
+            animation-direction: alternate;
+        }
+        @keyframes myAnimation{
+            0% {background: blue; left: 0px; top: 0px;}
+            25% {background: green; left: 200px top:10px;}
+            30% {background: red; left:150px; top:30px;}
+            50% {background: yellow; left:10px; top:300px}
+            80% {background: pink; left: 80px; top:200px}
+            100% {background: purple; left: 0px; top:10px}
+        }
+    </style>
+</head>
+<body>
+    <div>myAnimation</div>
+</body>
+</html>
